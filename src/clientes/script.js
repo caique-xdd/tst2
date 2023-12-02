@@ -16,7 +16,7 @@
     //Logica do programa
 
     const api =axios.create({
-        baseURL : 'https://banco-prod.onrender.com'
+        baseURL : 'https://crud-tst.onrender.com'
     })
 
     async function consulta(){
