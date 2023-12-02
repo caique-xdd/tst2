@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de produtos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./produtos.css">
+</head>
+<body>
+
+    <h3 id="titulo">Sistema De Produtos</h3>
+    <br>
+    
+    <div id="container">
+    <p>Código <input id="inpCod" type="text"></p>
+    <p>Nome <input id="inpNome" type="text"></p>
+    <p>Descrição <input id="inpDescri" type="text"></p>
+    <p>Fabricante <input id="inpFabricante" type="text"></p>
+    <p>Quantidade <input id="inpQtda" type="text"></p>
+    <p>Preço <input id="inpPreco" type="text"></p>
+    <p>Custo <input id="inpCusto" type="text"></p>
+    <p>Data de Criação <input id="inpData" type="text"></p>
+    </div>
+
+    <br>
+    <div id="container2">
+    <a href="#" id="btnCon">Consultar</a>
+    <a href="#" id="btnCad">Cadastrar</a>
+    <a href="#" id="btnAlt">Alterar</a>
+    <a href="#" id="btnExc">Excluir</a>
+    <a href="#" id="btnLim">Limpar</a>
+    <a href="../../index.html">Voltar</a>
+    </div>
+
+ <script src="../../node_modules/axios/dist/axios.min.js"></script>
+ <script src="./script.js"></script>
+</body>
+</html>
