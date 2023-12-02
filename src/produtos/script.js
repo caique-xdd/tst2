@@ -9,29 +9,15 @@ const inpPreco = document.getElementById('inpPreco');
 const inpCusto = document.getElementById('inpCusto');
 const inpData = document.getElementById('inpData');
 
-const btnCon = document.getElementById('btnCon');
-const btnCad = document.getElementById('btnCad');
-const btnAlt = document.getElementById('btnAlt');
-const btnExc = document.getElementById('btnExc');
-const btnLim = document.getElementById('btnLim');
-//Lógica do programa
-
 const api = axios.create({
     baseURL : 'https://crud-tst.onrender.com'
 });
 
-async function consultaNome(){
-    const nome = inpNome.value;
-    const response = await api('/produtos/' + nome)
-    inpCod.value = response.data[0].cod;
-    inpNome.value = response.data[0].nome;
-    inpDescri.value = response.data[0].descri;
-    inpFabricante.value = response.data[0].fabricante;
-    inpQtda.value = response.data[0].qtda;
-    inpPreco.value = response.data[0].preco;
-    inpCusto.value = response.data[0].custo;
-    inpData.value = response.data[0].data;
-}
+//- Lógica do programa -
+
+
+//Create
+const btnCad = document.getElementById('btnCad');
 
 async function inclusao(){
     const nome = inpNome.value;
@@ -62,6 +48,33 @@ async function inclusao(){
     inpData.value = "";
 }
 
+btnCad.onclick = ()=>{
+    inclusao()
+}
+
+//Research
+const btnCon = document.getElementById('btnCon');
+
+async function consultaNome(){
+    const nome = inpNome.value;
+    const response = await api('/produtos/' + nome)
+    inpCod.value = response.data[0].cod;
+    inpNome.value = response.data[0].nome;
+    inpDescri.value = response.data[0].descri;
+    inpFabricante.value = response.data[0].fabricante;
+    inpQtda.value = response.data[0].qtda;
+    inpPreco.value = response.data[0].preco;
+    inpCusto.value = response.data[0].custo;
+    inpData.value = response.data[0].data;
+}
+
+btnCon.onclick = ()=>{
+    consultaNome()
+}
+
+//Update
+const btnAlt = document.getElementById('btnAlt');
+
 async function alteracao(){
     const cod = inpCod.value;
 
@@ -84,6 +97,13 @@ async function alteracao(){
     const response = await api.put('/produtos/' + cod,data);
 }
 
+btnAlt.onclick = ()=>{
+    alteracao()
+}
+
+//Delete
+const btnExc = document.getElementById('btnExc');
+
 async function exclusao(){
     const cod = inpCod.value;
 
@@ -100,6 +120,13 @@ async function exclusao(){
     inpData.value = "";
 }
 
+btnExc.onclick = ()=>{
+    exclusao()
+}
+
+//*Perfumaria
+const btnLim = document.getElementById('btnLim');
+
 async function lim(){
     inpCod.value = "";
     inpNome.value = "";
@@ -109,23 +136,6 @@ async function lim(){
     inpPreco.value = "";
     inpCusto.value = "";
     inpData.value = "";
-}
-
-
-btnCon.onclick = ()=>{
-    consultaNome()
-}
-
-btnCad.onclick = ()=>{
-    inclusao()
-}
-
-btnAlt.onclick = ()=>{
-    alteracao()
-}
-
-btnExc.onclick = ()=>{
-    exclusao()
 }
 
 btnLim.onclick = ()=>{
