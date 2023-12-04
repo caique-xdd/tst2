@@ -142,7 +142,7 @@ function ins(){
         Para alteração, digite o código do produto e execute a função.
         - 
         Para exclusão, digite o código do produto e execute a função.
-        
+        -
         O botão "Limpar" torna vazios os campos preenchidos.
         -
         Para retornar a tela inicial, clique em "Voltar"
