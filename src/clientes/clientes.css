@@ -24,9 +24,10 @@ body{
     text-align: center;
 }
 
-
-
-
+#cont{
+    text-align: center;
+    margin-top: 2.5%;
+}
 
 
 a{

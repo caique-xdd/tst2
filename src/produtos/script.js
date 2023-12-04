@@ -125,6 +125,8 @@ btnExc.onclick = ()=>{
 }
 
 //*Perfumaria
+
+//Limpar campos
 const btnLim = document.getElementById('btnLim');
 
 async function lim(){
@@ -141,3 +143,28 @@ async function lim(){
 btnLim.onclick = ()=>{
     lim()
 }
+
+//Instruções
+
+const btnIns = document.getElementById('btnIn');
+
+function ins(){
+    alert(`
+        Para cadastro, não é necessario colocar código e data. Nosso sistema preenchera corretamente.
+        -
+        Para consulta, digite o nome do produto e execute a função(aperte o botão de respectiva ordem).
+        -
+        Para alteração, digite o código do produto e execute a função.
+        - 
+        Para exclusão, digite o código do produto e execute a função.
+        
+        O botão "Limpar" torna vazios os campos preenchidos.
+        -
+        Para retornar a tela inicial, clique em "Voltar"
+    `);
+}
+
+btnIns.onclick = ()=>{
+    ins();
+}
+
